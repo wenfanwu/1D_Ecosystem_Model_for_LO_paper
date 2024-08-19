@@ -12,7 +12,7 @@ Wu et al. 2024, High-frequency dynamics of bottom dissolved oxygen in temperate 
 
 This model contains a total of 11 state variables, including two phytoplankton species (small phytoplankton and diatom), two zooplankton species (microzooplankton and mesozooplankton), four dissolved inorganic nutrients (nitrate, phosphate,ammonium, and silicate), two detritus organic matters (detritus nitrogen and detritus silicon), and dissolved oxygen (see Figure 1 below). 
 
-<img title="" src="misc/model_framework.png" alt="Model Framework" width="523" height="" data-align="inline">
+<img title="" src="misc/model_framework.png" alt="Model Framework" width="570" height="" data-align="inline">
 
 **Figure 1.** Model framework
 
