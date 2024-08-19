@@ -6,10 +6,6 @@ Wu et al. 2024, High-frequency dynamics of bottom dissolved oxygen in temperate 
 
 
 
-This model contains a total of 11 state variables, including two phytoplankton species (small phytoplankton and diatom), two zooplankton species (microzooplankton and mesozooplankton), four dissolved inorganic nutrients (nitrate, phosphate,ammonium, and silicate), two detritus organic matters (detritus nitrogen and detritus silicon), and dissolved oxygen (see Figure 1 below). 
-
-
-
 **CoSiNE_1D_main.m**: the core code of the ecosystem model.
 
 **CoSiNE_1D_demo.m**: the demo used to demonstrate the usage of model.
@@ -18,4 +14,14 @@ This model contains a total of 11 state variables, including two phytoplankton s
 
 
 
-Author Info: Wenfan Wu, PhD, Virginia Institute of Marine Science, William & Mary | wwu@vims.edu
+This model contains a total of 11 state variables, including two phytoplankton species (small phytoplankton and diatom), two zooplankton species (microzooplankton and mesozooplankton), four dissolved inorganic nutrients (nitrate, phosphate,ammonium, and silicate), two detritus organic matters (detritus nitrogen and detritus silicon), and dissolved oxygen (see Figure 1 below). 
+
+
+
+![替代文本](misc/model_framework.png)
+
+**Figure 1.** Model framework
+
+
+
+Author Info: Wenfan Wu, PhD, Virginia Institute of Marine Science, William & Mary | [wwu@vims.edu](mailto:wwu@vims.edu)
