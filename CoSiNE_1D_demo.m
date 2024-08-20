@@ -65,7 +65,7 @@ set(gca, 'FontSize', 10, 'LineWidth', 1)
 xticks(time(1):calmonths(1):time(end))
 xticklabels(datestr(time(1):calmonths(1):time(end), 'm')) %#ok<*DATST>
 ylabel('Bottom DO (mg/L)', 'FontWeight','bold', 'FontSize', 11)
-text(323.1466668393783,3.374233128834356,1.4210854715202e-14, '2 mg/L', 'Color', 'k')
+text(321,3.374233128834356,1.4210854715202e-14, '2 mg/L', 'Color', 'r', 'FontWeight', 'bold')
 
 nexttile([2 1])
 colororder([0.0118 0.2627 0.8745; 0.9765 0.4510 0.0235])
@@ -79,21 +79,21 @@ plot(Hydro.time, mean(Hydro.temp_prof(1,:), 1, 'omitnan')-mean(Hydro.temp_prof(2
 box on; grid on
 set(gca, 'FontSize', 10, 'LineWidth', 1)
 ylabel('Thermal Stratification (℃)', 'FontWeight','bold', 'FontSize', 11)
+xlim([time(1) time(end)])
 ylim([-15 15])
 yticks(-15:5:15)
-xlim([time(1) time(end)])
 xticks(time(1):calmonths(1):time(end))
 xticklabels(datestr(time(1):calmonths(1):time(end), 'm')) 
 
 nexttile([2 1])
 colororder([0.0235 0.7608 0.6745; 0.8118    0.3843    0.4588])
 yyaxis left
-dox_data = squeeze(TA(:, iDOX, :));
+dox_data = squeeze(TA(:, iDOX, :))*0.032;
 dox_grad = -diffxy(Mobj.depth, dox_data, 1);
 plot(time, mean(dox_grad(end-10:end, :), 1), 'LineWidth', 0.25, 'Color', [0.0235 0.7608 0.6745])
 xlim([time(1) time(end)])
-ylim([-5 30])
-yticks(-5:5:30)
+ylim([-0.2 1])
+yticks(-0.2:0.2:1)
 box on; grid on
 set(gca, 'FontSize', 10, 'LineWidth', 1)
 xticks(time(1):calmonths(1):time(end))
@@ -103,6 +103,7 @@ yyaxis right
 plot(time, -DA.o2flx(1,:), 'Linewidth', 2, 'Color', [0.8118 0.3843 0.4588])
 ylabel('SOD rate (mmol/m^2/d)', 'FontWeight','bold')
 ylim([-5 20])
+xlim([time(1) time(end)])
 
 figure('Units', 'normalized', 'Position',  [0.216,0.09,0.38,0.14], 'Color', 'w')
 area(time, DO_hf, 'FaceColor', [0.0039 0.3961 0.9882])
@@ -116,7 +117,7 @@ ylabel('HF DO signal (mg/L)', 'FontWeight','bold', 'FontSize', 11)
 
 % Vertical profile of DO on July 3 as an example
 cyear = year(InitCnd.time(1));
-[~, ind_time] = min(abs(time-datetime(cyear,7,3)));
+[~, ind_time] = min(abs(time-datetime(cyear,7, 3)));
 DO_bot = squeeze(TA(:, iDOX, ind_time))*0.032;
 
 figure('Units', 'normalized', 'Position', [4.544271e-01,4.770833e-01,1.884766e-01,4.156250e-01], 'Color', 'w')
