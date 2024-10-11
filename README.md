@@ -1,6 +1,6 @@
 # 1D_Ecosystem_Model_for_LO_paper
 
-This one-dimensional (1D) ecosystem model is developed primarily based on the [CoSiNE module](https://ccrm.vims.edu/schismweb/CoSiNE_manual_ZG_v5.pdf) of SCHISM modeling system. It is designed to simulate the high-frequency dynamics of bottom dissolved oxygen, as part of Wu et al. (2024, High-frequency dynamics of bottom dissolved oxygen in temperate shelf seas: the joint role of tidal mixing and sediment oxygen demand, *Limnol. Oceanogr.* Under Review).
+This one-dimensional (1D) ecosystem model is developed primarily based on the [CoSiNE module](https://ccrm.vims.edu/schismweb/CoSiNE_manual_ZG_v5.pdf) of SCHISM modeling system. It is designed to simulate the high-frequency dynamics of bottom dissolved oxygen, as part of Wu et al. (2024, High-frequency dynamics of bottom dissolved oxygen in temperate shelf seas: the joint role of tidal mixing and sediment oxygen demand, *Limnol. Oceanogr.* Accepted).
 
 **CoSiNE_1D_main.m**: the core code of the ecosystem model.
 
